@@ -21,6 +21,13 @@
         column-count: 3;
     }
 }
+#scramble {
+    transition: opacity 0.5s;
+    opacity:1;
+}
+#scramble.hidden{
+    opacity:0;
+}
 /*
 @media (min-width: 1200px) {
     .card-columns {
