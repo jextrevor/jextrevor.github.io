@@ -21,6 +21,10 @@
         column-count: 3;
     }
 }
+.img-thumbnail{
+    background-color:#343a40 !important;
+    border-color:#343a40 !important;
+}
 #scramble {
     transition: opacity 0.5s;
     opacity:1;
