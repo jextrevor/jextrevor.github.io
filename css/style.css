@@ -25,6 +25,9 @@
     background-color:#343a40 !important;
     border-color:#343a40 !important;
 }
+.card.border-primary.p-1{
+    background-color:#F8F8F8;
+}
 #scramble {
     transition: opacity 0.5s;
     opacity:1;
