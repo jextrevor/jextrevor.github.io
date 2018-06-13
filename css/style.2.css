@@ -29,6 +29,7 @@ button{
     border:none;
     outline:none;
     font:inherit;
+    cursor:pointer;
 }
 .header{
     width:100%;
