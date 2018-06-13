@@ -1,3 +1,7 @@
+:root {
+    --glow-color: #0DF;
+}
+
 html, body{
     margin:0px;
     font-family:"Nunito Sans",sans-serif;
@@ -11,12 +15,14 @@ h1{
     font-size:3em;
     font-weight:400;
     margin-bottom:0.5rem;
+    text-align:center;
 }
 h3{
     margin:0px;
-    font-size:1.2em;
+    font-size:1.3em;
     font-weight:400;
     margin-bottom:0.5rem;
+    text-align:center;
 }
 a{
     text-decoration: none;
@@ -33,10 +39,13 @@ button{
 }
 .header{
     width:100%;
-    background-color:#ecf0f1;
-    padding-top:2em;
-    padding-bottom:2em;
+    background-color:#111;
+    padding-top:3em;
+    padding-bottom:3em;
     margin-bottom:1em;
+    text-align:center;
+    color:#FFFFFF;
+    text-shadow:0px 0px 3px #FFFFFF;
 }
 .header h3{
     font-weight:400;
@@ -47,16 +56,28 @@ button{
 .header h1{
     font-size:3.5em;
     margin-bottom:0;
+    text-transform: uppercase;
 }
 .container{
     padding-left:1em;
     padding-right:1em;
     margin:0px;
+    margin-left:auto;
+    margin-right:auto;
+    max-width:400px;
+}
+.image{
+    width:100%;
+}
+.img{
+    background-image:url(../media/trevor.svg);
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
 }
 hr{
     border:0.5px solid #CCC;
-    margin-left:1em;
-    margin-right:1em;
+    /*margin-left:1em;
+    margin-right:1em;*/
 }
 .nav{
     width:100%;
@@ -70,6 +91,9 @@ hr{
     font-size:1.12em;
     font-weight:600;
     margin-bottom:0px;
+}
+p.footer{
+    margin-bottom:0.5em;
 }
 .nav>.container{
     display: flex;
@@ -85,11 +109,14 @@ hr{
     text-shadow:0px 0px 10px #FFF;
 }
 button.primary{
-    background-color:#2C3E50;
+    background-color:#DB9834;
     color:#FFF;
     font-size:1em;
     padding:0.6em;
     border-radius:5px;
+}
+button.primary:hover{
+    background-color:#C68423;
 }
 button.info{
     background-color:#3498DB;
@@ -98,12 +125,90 @@ button.info{
     padding:0.6em;
     border-radius:5px;
 }
+button{
+    transition:background-color 0.25s;
+}
+button.info:hover{
+    background-color:#2384C6;
+}
 button + button{
     margin-left:0.2em;
 }
 p + p {
     margin-top:1em;
 }
-p + img{
+.content + .image{
     margin-top:1em;
+}
+#scramble {
+    transition: text-shadow 0.5s, opacity 0.5s;
+    text-shadow:0px 0px 60px var(--glow-color),0px 0px 60px var(--glow-color);
+    opacity:1;
+    color:var(--glow-color);
+    font-family:Neon;
+}
+#scramble.hidden{
+    text-shadow:0px 0px 0px var(--glow-color),0px 0px 0px var(--glow-color);
+    opacity:0;
+}
+.content-container{
+    width:100%;
+    max-width:100%;
+    margin-bottom:1em;
+}
+@font-face {
+    font-family: Neon;
+    src:url(../media/marq.ttf);
+}
+@media (min-width:600px){
+    h1,h3{
+        text-align:inherit;
+    }
+    .container{
+        max-width:700px;
+    }
+    .content{
+        flex:1;
+    padding-right:1em;
+    }
+    .image{
+        flex:0 0 50%;
+    }
+    .content-container{
+        display:flex;
+        flex-direction:row;
+    }
+    .content + .image{
+        margin-top:0em;
+    }
+}
+@media (min-width:900px){
+    .container{
+        max-width:700px;
+    }
+    .image{
+        flex-basis:40%;
+    }
+    .header{
+        padding-top:4em;
+        padding-bottom:4em;
+    }
+    .header h1{
+        font-size:4em;
+    }
+}
+@media (min-width:1200px){
+    .container{
+        max-width:1140px;
+    }
+    .image{
+        flex-basis:30%;
+    }
+    .header{
+        padding-top:5em;
+        padding-bottom:5em;
+    }
+    .header h1{
+        font-size:4.5em;
+    }
 }
