@@ -50,6 +50,7 @@ button{
 .container{
     padding-left:1em;
     padding-right:1em;
+    margin:0px;
 }
 hr{
     border:0.5px solid #CCC;
@@ -100,5 +101,8 @@ button + button{
     margin-left:0.2em;
 }
 p + p {
+    margin-top:1em;
+}
+p + img{
     margin-top:1em;
 }
