@@ -26,8 +26,11 @@ h3{
 }
 a{
     text-decoration: none;
-    color:inherit;
-    cursor: default;
+    font-weight:600;
+    color:#03C;
+}
+a:hover{
+    text-decoration:underline;
 }
 button{
     background:none;
@@ -100,6 +103,7 @@ p.footer{
     justify-content: space-between;
 }
 .nav a{
+    color:white;
     font-weight:400;
     padding-left:0.5em;
     padding-right:0.5em;
@@ -117,6 +121,13 @@ button.primary{
 }
 button.primary:hover{
     background-color:#C68423;
+}
+button.dark{
+    background-color:#111;
+    color:#FFF;
+    font-size:1em;
+    padding:0.6em;
+    border-radius:5px;
 }
 button.info{
     background-color:#3498DB;
@@ -155,6 +166,69 @@ p + p {
     width:100%;
     max-width:100%;
     margin-bottom:1em;
+}
+#dialog-container{
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    display:none;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    opacity:0;
+    transition: opacity 0.5s;
+}
+#dialog-container.visible{
+    display:flex;
+}
+#dialog-container.fadein{
+    opacity:1;
+}
+body.modal{
+    overflow:hidden;
+}
+p + .label:before{
+    content:"";
+    display:block;
+}
+a + .label:before{
+    content:"";
+    display:block;
+}
+.ralign{
+    text-align: right;
+}
+.space{
+    padding-top:1em;
+}
+#dialog-overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    background-color:black;
+    opacity:0;
+    transition: opacity 0.5s;
+    display:none;
+}
+#dialog-overlay.visible{
+    display:block;
+}
+#dialog-overlay.fadein{
+    opacity:0.75;
+}
+.dialog{
+    background-color:white;
+    opacity:1;
+    padding:2em;
+    box-shadow: 0px 0px 10px #FFF;
+}
+.label{
+    margin-right:1em;
+    font-weight:600;
 }
 @font-face {
     font-family: Neon;

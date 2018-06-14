@@ -12,12 +12,12 @@
 </head>
 
 <body>
-  <div class="nav"><div class="container"><h1>Trevor Jex</h1><div class="links"><a href="https://github.com/jextrevor" target="_blank">Github</a><a href="resume.pdf" target="_blank">Resume</a><a href="#">Contact</a></div></div></div>
+  <div class="nav"><div class="container"><h1 onclick="openDialog()">Trevor Jex</h1><div class="links"><a href="https://github.com/jextrevor" target="_blank">Github</a><a href="resume.pdf" target="_blank">Resume</a><a onclick="openDialog()">Contact</a></div></div></div>
 <div class="header">
   <div class="container">
 <h1 id="scramble">Trevor Jex</h1>
 <h3>I am a software engineer specializing in Python and JavaScript development.</h3>
-<button class="primary">My Projects</button><button class="info">Contact Me</button>
+<button class="primary">My Projects</button><button class="info" onclick="openDialog()">Contact Me</button>
 </div>
 </div>
 <div class="container">
@@ -39,7 +39,19 @@
 <hr />
 <p class="footer">Built and designed by Trevor Jex. Copyright &copy; 2018. All rights reserved.</p>
 </div>
+<div id="dialog-overlay"></div>
+<div id="dialog-container">
+<div class="dialog container">
+<h1>Contact Me</h1>
+<hr />
+<p>Feel free to contact me by phone or by email.</p>
+<div class="space"><span class="label">Phone: </span><a href="sms:8018221805">801-822-1805</a></div>
+  <div class="space"><span class="label">Email: </span><a href="mailto:jextrevor@gmail.com">jextrevor@gmail.com</a></div>
+<div class="ralign space"><hr /><button class="dark" onclick="closeDialog()">Close</button></div>
+</div>
+</div>
 <script src="js/scramble.js"></script>
+<script src="js/modal.js"></script>
 </body>
 
 </html>
