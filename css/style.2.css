@@ -43,6 +43,10 @@ button{
     outline:none;
     font:inherit;
     cursor:pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+button:active, button:focus{
+    outline:none;
 }
 .header{
     width:100%;
@@ -117,6 +121,8 @@ p.footer{
 }
 .nav a:hover{
     text-shadow:0px 0px 10px #FFF;
+    text-decoration: none;
+    cursor: pointer;
 }
 button.primary{
     background-color:#DB9834;
