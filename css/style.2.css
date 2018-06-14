@@ -6,6 +6,10 @@ html, body{
     margin:0px;
     font-family:"Nunito Sans",sans-serif;
     font-weight:400;
+    background-color:#EEE;
+}
+body{
+    height:100%;
 }
 p{
     margin:0px;
@@ -48,10 +52,10 @@ button{
     margin-bottom:1em;
     text-align:center;
     color:#FFFFFF;
-    text-shadow:0px 0px 3px #FFFFFF;
+    /*text-shadow:0px 0px 2px #FFFFFF;*/
 }
 .header h3{
-    font-weight:400;
+    font-weight:600;
     font-size:1.2em;
     margin:0px;
     margin-bottom:0.5em;
@@ -96,7 +100,9 @@ hr{
     margin-bottom:0px;
 }
 p.footer{
-    margin-bottom:0.5em;
+    padding-top:0.5em;
+    padding-bottom:0.5em;
+    display: block;
 }
 .nav>.container{
     display: flex;
@@ -151,6 +157,46 @@ p + p {
 .content + .image{
     margin-top:1em;
 }
+h1.neon{
+    font-family:Neon;
+    text-shadow:0px 0px 60px #FFF,0px 0px 60px #FFF;
+    text-align:center;
+    font-size:3.5em;
+    padding-top:2rem;
+    padding-bottom:2rem;
+}
+.projects{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.project{
+    background-color:#DDD;
+    border-radius:5px;
+    color:#000;
+    margin:1rem;
+    padding:1rem;
+    flex: 1 1 225px;
+    border:5px solid #CCC;
+}
+.project>.image{
+    margin:0;
+    width:100%;
+}
+.project>.title{
+    font-weight:600;
+    font-size:2em;
+    text-transform: uppercase;
+    text-align:center;
+    padding-top:1rem;
+    border-top:1px solid black;
+}
+.project-filler{
+    background:none;
+    margin:0 1rem;
+    padding:0 1rem;
+    flex: 1 1 225px;
+}
 #scramble {
     transition: text-shadow 0.5s, opacity 0.5s;
     text-shadow:0px 0px 60px var(--glow-color),0px 0px 60px var(--glow-color);
@@ -186,9 +232,9 @@ p + p {
 #dialog-container.fadein{
     opacity:1;
 }
-body.modal{
+/*body.modal{
     overflow:hidden;
-}
+}*/
 p + .label:before{
     content:"";
     display:block;
@@ -202,6 +248,11 @@ a + .label:before{
 }
 .space{
     padding-top:1em;
+}
+.dark-section{
+    width:100%;
+    background-color:#111;
+    color:#FFF;
 }
 #dialog-overlay{
     position:fixed;
