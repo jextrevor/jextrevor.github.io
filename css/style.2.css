@@ -124,37 +124,50 @@ p.footer{
     text-decoration: none;
     cursor: pointer;
 }
-button.primary{
+button.primary, a.primary{
     background-color:#DB9834;
     color:#FFF;
     font-size:1em;
     padding:0.6em;
     border-radius:5px;
 }
-button.primary:hover{
+button.secondary, a.secondary{
+    background-color:#CCC;
+    color:#000;
+    font-size:1em;
+    padding:0.6em;
+    border-radius:5px;
+}
+button.primary:hover, a.primary:hover{
     background-color:#C68423;
 }
-button.dark{
+button.secondary:hover, a.secondary:hover{
+    background-color:#AAA;
+}
+button.dark, a.dark{
     background-color:#111;
     color:#FFF;
     font-size:1em;
     padding:0.6em;
     border-radius:5px;
 }
-button.info{
+button.dark:hover, a.dark:hover{
+    background-color:#222;
+}
+button.info, a.info{
     background-color:#3498DB;
     color:#FFF;
     font-size:1em;
     padding:0.6em;
     border-radius:5px;
 }
-button{
+button, a{
     transition:background-color 0.25s;
 }
-button.info:hover{
+button.info:hover, a.info:hover{
     background-color:#2384C6;
 }
-button + button{
+button + button, a + a{
     margin-left:0.2em;
 }
 p + p {
@@ -176,6 +189,15 @@ h1.neon{
     justify-content: space-between;
     flex-wrap: wrap;
 }
+.project-desc{
+    display:none;
+    position:fixed;
+    opacity:0;
+    transition:opacity 0.5s, top 0.5s, left 0.5s, width 0.5s, height 0.5s;
+    background-color:#EEE;
+    color:#000;
+    overflow:hidden;
+}
 .project{
     background-color:#DDD;
     border-radius:5px;
@@ -184,6 +206,8 @@ h1.neon{
     padding:1rem;
     flex: 1 1 225px;
     border:5px solid #CCC;
+    user-select:none;
+    cursor:pointer;
 }
 .project>.image{
     margin:0;
