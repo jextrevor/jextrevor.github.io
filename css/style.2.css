@@ -1,12 +1,14 @@
 :root {
     --glow-color: #0DF;
+    --background-color: #EEE;
+    --transition-time: 0.25s;
 }
 
 html, body{
     margin:0px;
     font-family:"Nunito Sans",sans-serif;
     font-weight:400;
-    background-color:#EEE;
+    background-color:var(--background-color);
 }
 body{
     height:100%;
@@ -162,7 +164,7 @@ button.info, a.info{
     border-radius:5px;
 }
 button, a{
-    transition:background-color 0.25s;
+    transition:background-color var(--transition-time);
 }
 button.info:hover, a.info:hover{
     background-color:#2384C6;
@@ -193,8 +195,8 @@ h1.neon{
     display:none;
     position:fixed;
     opacity:0;
-    transition:opacity 0.5s, top 0.5s, left 0.5s, width 0.5s, height 0.5s;
-    background-color:#EEE;
+    transition:opacity var(--transition-time), top var(--transition-time), left var(--transition-time), width var(--transition-time), height var(--transition-time);
+    background-color:var(--background-color);
     color:#000;
     overflow:hidden;
 }
@@ -209,7 +211,7 @@ h1.neon{
     user-select:none;
     cursor:pointer;
     opacity:1;
-    transition:opacity 0.5s;
+    transition:opacity var(--transition-time);
 }
 .project>.image{
     margin:0;
@@ -230,7 +232,7 @@ h1.neon{
     flex: 1 1 225px;
 }
 #scramble {
-    transition: text-shadow 0.5s, opacity 0.5s;
+    transition: text-shadow var(--transition-time), opacity var(--transition-time);
     text-shadow:0px 0px 60px var(--glow-color),0px 0px 60px var(--glow-color);
     opacity:1;
     color:var(--glow-color);
@@ -256,7 +258,7 @@ h1.neon{
     align-items: center; 
     justify-content: center;
     opacity:0;
-    transition: opacity 0.5s;
+    transition: opacity var(--transition-time);
 }
 #dialog-container.visible{
     display:flex;
@@ -294,7 +296,7 @@ a + .label:before{
     right:0;
     background-color:black;
     opacity:0;
-    transition: opacity 0.5s;
+    transition: opacity var(--transition-time);
     display:none;
 }
 #dialog-overlay.visible{
@@ -316,6 +318,16 @@ a + .label:before{
 @font-face {
     font-family: Neon;
     src:url(../media/marq.ttf);
+}
+@font-face{
+    font-family: "Nunito Sans";
+    font-weight:400;
+    src:url(../media/nunr.ttf);
+}
+@font-face{
+    font-family: "Nunito Sans";
+    font-weight:600;
+    src:url(../media/nunb.ttf);
 }
 @media (min-width:600px){
     h1,h3{
