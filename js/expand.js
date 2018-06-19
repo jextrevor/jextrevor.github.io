@@ -8,6 +8,7 @@ function expand(id,contid){
     cont.style.height = (coords.bottom - coords.top) + "px";
     cont.style.display = "block";
     setTimeout(function(){
+    comp.style.opacity = 0;
     cont.style.opacity = 1;
     cont.style.top = "0px";
     cont.style.left = "0px";
@@ -20,6 +21,7 @@ function hide(id,contid){
     cont = document.getElementById(contid);
     var coords = comp.getBoundingClientRect();
     setTimeout(function(){
+    comp.style.opacity = 1;
     cont.style.opacity = 0;
     cont.style.top = coords.top + "px";
     cont.style.left = coords.left + "px";
