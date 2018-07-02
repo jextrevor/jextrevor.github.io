@@ -46,7 +46,8 @@
   </p>
 </div>
 <div class="image">
-<div class="img"><img src="media/trevor.jpg" srcset="media/trevor2x.jpg 2x" width="100%" /></div>
+<img src="media/Trevor-18.png" width="100%" />
+<img src='media/Trevor-18-2.png' alt='' class="special" width="100%"/>
 </div>
 </div>
 </div>
@@ -56,31 +57,32 @@
   <h1 class="neon">My Work</h1>
   <hr />
   <div class="projects">
-    <div class="project" id="automation" onclick="expand('automation','automation-desc')"><div class="image" ><img src="media/automation.jpg" width="100%" /></div><div class="title">Automation</div></div>
-    <div class="project-desc" id="automation-desc">
-      <div class="container">
+    
+<div class="project" id="automation" onclick="expand('automation','automation-desc')"><div class="image" ><img src="media/automation.jpg" width="100%" /></div><div class="title">Automation</div></div>
+<div class="project-desc" id="automation-desc">
+    <div class="container">
         <h1>AUTOMATION</h1>
         <hr />
-        <p>Automation is a automatic music player and alarm clock for the Raspberry Pi. Capabilities include the following:</p>
-        <ul>
-          <li>Automatic starting of music when movement in the room is detected (using the Raspberry Pi camera)</li>
-          <li>Automatic adjustment to slight changes in environment (gradual changing of light due to the sun, camera noise)</li>
-          <li>Music alarm at a certain time, time is changeable through the web interface</li>
-          <li>Notification LED when the program is "talking" (using the Raspberry Pi Camera LED)</li>
-          <li>Statement of the weather forecast for the day when the alarm is played (cloudy, partly cloudy, sunny, etc.)</li>
-          <li>Statement of how many unread emails the user has when music starts</li>
-          <li>User-settable reminders</li>
-          <li>Web interface to toggle alarm status, play or pause music, upload new music, and set reminders</li>
-        </ul>
-        <p>The project is written in Python and is designed to run on the Model B. To run on newer models such as the B+ or Pi 2 you must change the CAMLED variable in the code to the GPIO port associated with the camera LED (32 for B+ or 2, 40 for Pi Zero).</p>
+        <p>Automation is a automatic music player and alarm clock for the Raspberry Pi. Capabilities include the following:</p>    <ul>      <li>Automatic starting of music when movement in the room is detected (using the Raspberry Pi camera)</li>      <li>Automatic adjustment to slight changes in environment (gradual changing of light due to the sun, camera noise)</li>      <li>Music alarm at a certain time, time is changeable through the web interface</li>      <li>Notification LED when the program is "talking" (using the Raspberry Pi Camera LED)</li>      <li>Statement of the weather forecast for the day when the alarm is played (cloudy, partly cloudy, sunny, etc.)</li>      <li>Statement of how many unread emails the user has when music starts</li>      <li>User-settable reminders</li>      <li>Web interface to toggle alarm status, play or pause music, upload new music, and set reminders</li></ul><p>The project is written in Python and is designed to run on the Model B. To run on newer models such as the B+ or Pi 2 you must change the CAMLED variable in the code to the GPIO port associated with the camera LED (32 for B+ or 2, 40 for Pi Zero).</p>
+        <br />
         <button class="secondary" onclick="link('https://github.com/jextrevor/Automation');">View Github Repo</button>
         <button class="dark" onclick="hide('automation','automation-desc')">Close Description</button>
-      </div>
     </div>
-    <div class="project"></div>
-    <div class="project"></div>
-    <div class="project"></div>
-    <div class="project"></div>
+</div>
+
+    
+<div class="project" id="spaceserver" onclick="expand('spaceserver','spaceserver-desc')"><div class="image" ><img src="media/spaceserver.png" width="100%" /></div><div class="title">Space Server</div></div>
+<div class="project-desc" id="spaceserver-desc">
+    <div class="container">
+        <h1>SPACE SERVER</h1>
+        <hr />
+        <p>Backbone of Star Trek-like space simulations. Uses SocketIO and a custom state-syncing backend.</p>
+        <br />
+        <button class="secondary" onclick="link('https://github.com/jextrevor/spaceserver');">View Github Repo</button>
+        <button class="dark" onclick="hide('spaceserver','spaceserver-desc')">Close Description</button>
+    </div>
+</div>
+
     <div class="project-filler"></div>
     <div class="project-filler"></div>
     <div class="project-filler"></div>
