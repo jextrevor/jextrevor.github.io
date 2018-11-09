@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Trevor Jex</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.2.css" />
+</head>
+
+<body>
+
+
+<div class="nav">
+    <div class="container">
+        <h1 onclick="openDialog()">Trevor Jex</h1>
+        <div class="links">
+            <a href="https://github.com/jextrevor" target="_blank">Github</a>
+            <a href="resume.pdf" target="_blank">Resume</a>
+            <a onclick="openDialog()">Contact</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="header">
+    <div class="container">
+        <h1 id="scramble">Trevor Jex</h1>
+        <h3>I am a software engineer specializing in Python and JavaScript development.</h3>
+        <button href="#projects" class="primary">My Projects</button>
+        <button class="info" onclick="openDialog()">Contact Me</button>
+    </div>
+</div>
+
+<div class="container">
+<div class="content-container">
+<div class="content">
+    <h1>About Me</h1>
+    <h3>Student and Software Engineer</h3>
+<p>My name is Trevor Jex and I graduated from American Fork High School on May 31, 2018. I begin studying at Brigham Young
+    University in the fall of 2018. I have a passion for learning, creating and designing.</p>
+  <p>My favorite languages are Python and JavaScript. I love web design, especially when it comes to CSS or websockets, and I love Linux as well as Android.</p>
+  <p>My hobbies include playing the piano, playing tennis and frisbee, listening to new-age music, going on dates, and
+    designing innovative apps and programs.
+  </p>
+</div>
+<div class="image">
+<img src="media/Trevor-18.png" width="100%" />
+<img src='media/Trevor-18-2.png' alt='' class="special" width="100%"/>
+</div>
+</div>
+</div>
+<div class="dark-section">
+<div class="container">
+    <a name="projects"></a>
+  <h1 class="neon">My Work</h1>
+  <hr />
+  <div class="projects">
+    
+<div class="project" id="automation" onclick="expand('automation','automation-desc')"><div class="image" ><img src="media/automation.jpg" width="100%" /></div><div class="title">Automation</div></div>
+<div class="project-desc" id="automation-desc">
+    <div class="container">
+        <h1>AUTOMATION</h1>
+        <hr />
+        <p>Automation is a automatic music player and alarm clock for the Raspberry Pi. Capabilities include the following:</p>    <ul>      <li>Automatic starting of music when movement in the room is detected (using the Raspberry Pi camera)</li>      <li>Automatic adjustment to slight changes in environment (gradual changing of light due to the sun, camera noise)</li>      <li>Music alarm at a certain time, time is changeable through the web interface</li>      <li>Notification LED when the program is "talking" (using the Raspberry Pi Camera LED)</li>      <li>Statement of the weather forecast for the day when the alarm is played (cloudy, partly cloudy, sunny, etc.)</li>      <li>Statement of how many unread emails the user has when music starts</li>      <li>User-settable reminders</li>      <li>Web interface to toggle alarm status, play or pause music, upload new music, and set reminders</li></ul><p>The project is written in Python and is designed to run on the Model B. To run on newer models such as the B+ or Pi 2 you must change the CAMLED variable in the code to the GPIO port associated with the camera LED (32 for B+ or 2, 40 for Pi Zero).</p>
+        <br />
+        <button class="secondary" onclick="link('https://github.com/jextrevor/Automation');">View Github Repo</button>
+        <button class="dark" onclick="hide('automation','automation-desc')">Close Description</button>
+    </div>
+</div>
+
+    
+<div class="project" id="spaceserver" onclick="expand('spaceserver','spaceserver-desc')"><div class="image" ><img src="media/spaceserver.png" width="100%" /></div><div class="title">Space Server</div></div>
+<div class="project-desc" id="spaceserver-desc">
+    <div class="container">
+        <h1>SPACE SERVER</h1>
+        <hr />
+        <p>Backbone of Star Trek-like space simulations. Uses SocketIO and a custom state-syncing backend.</p>
+        <br />
+        <button class="secondary" onclick="link('https://github.com/jextrevor/spaceserver');">View Github Repo</button>
+        <button class="dark" onclick="hide('spaceserver','spaceserver-desc')">Close Description</button>
+    </div>
+</div>
+
+    <div class="project-filler"></div>
+    <div class="project-filler"></div>
+    <div class="project-filler"></div>
+    <div class="project-filler"></div>
+    <div class="project-filler"></div>
+  </div>
+  <hr />
+<p class="footer">Built and designed by Trevor Jex. Copyright &copy; 2018. All rights reserved.</p>
+</div>
+</div>
+<div id="dialog-overlay"></div>
+<div id="dialog-container">
+<div class="dialog container">
+<h1>Contact Me</h1>
+<hr />
+<p>Feel free to contact me by phone or by email.</p>
+<div class="space"><span class="label">Phone: </span><a href="sms:8018221805">801-822-1805</a></div>
+  <div class="space"><span class="label">Email: </span><a href="mailto:jextrevor@gmail.com">jextrevor@gmail.com</a></div>
+<div class="ralign space"><hr /><button class="dark" onclick="closeDialog()">Close</button></div>
+</div>
+</div>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/scroll.js"></script>
+<script src="js/scramble.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/expand.js"></script>
+<script src="js/buttons.js"></script>
+</body>
+
+</html>
